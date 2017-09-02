@@ -1,0 +1,9 @@
+#Ant properties
+#Sun Jul 10 14:10:27 CEST 2016
+builddate=20160710 1410
+description=merchandiseinitialdata
+name=merchandiseinitialdata
+releasedate=20150915 1445
+vendor=hybris
+version=5.7.0.14
+version.api=5.7.0

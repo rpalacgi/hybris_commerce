@@ -34,7 +34,6 @@ import org.springframework.beans.factory.annotation.Required;
 @Deprecated
 public class NewCustomerCheckoutFlowStrategy extends AbstractCheckoutFlowStrategy
 {
-
 	private static final Logger LOG = Logger.getLogger(NewCustomerCheckoutFlowStrategy.class);
 
 	private UserService userService;
@@ -54,7 +53,7 @@ public class NewCustomerCheckoutFlowStrategy extends AbstractCheckoutFlowStrateg
 	/**
 	 * Method which checks whether customer is new. In this case it just checks if the customer has a default shipping
 	 * address.
-	 * 
+	 *
 	 * @return Returns true if this is a new customer
 	 */
 	protected boolean isNewCustomer()

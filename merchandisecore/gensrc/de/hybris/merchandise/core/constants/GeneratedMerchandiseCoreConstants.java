@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 3 Sep, 2017 1:03:56 AM                      ---
+ * --- Generated at 19 Sep, 2017 10:41:48 AM                    ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -35,7 +35,14 @@ public class GeneratedMerchandiseCoreConstants
 	}
 	public static class Attributes
 	{
-		// no constants defined.
+		public static class Customer
+		{
+			public static final String ISINTERNAL = "isInternal".intern();
+		}
+		public static class Product
+		{
+			public static final String INTERNALONLY = "internalOnly".intern();
+		}
 	}
 	public static class Enumerations
 	{

@@ -13,13 +13,13 @@
  */
 package de.hybris.merchandise.core.checkout.flow.impl;
 
-import de.hybris.platform.acceleratorservices.checkout.flow.CheckoutFlowStrategy;
-import de.hybris.platform.acceleratorservices.checkout.flow.impl.AbstractCheckoutFlowStrategy;
-import de.hybris.platform.acceleratorservices.enums.CheckoutFlowEnum;
 import de.hybris.platform.commerceservices.customer.CustomerAccountService;
 import de.hybris.platform.core.model.user.CustomerModel;
 import de.hybris.platform.core.model.user.UserModel;
 import de.hybris.platform.servicelayer.user.UserService;
+import de.hybris.platform.acceleratorservices.checkout.flow.impl.AbstractCheckoutFlowStrategy;
+import de.hybris.platform.acceleratorservices.checkout.flow.CheckoutFlowStrategy;
+import de.hybris.platform.acceleratorservices.enums.CheckoutFlowEnum;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.log4j.Logger;
@@ -53,7 +53,7 @@ public class NewCustomerCheckoutFlowStrategy extends AbstractCheckoutFlowStrateg
 	/**
 	 * Method which checks whether customer is new. In this case it just checks if the customer has a default shipping
 	 * address.
-	 *
+	 * 
 	 * @return Returns true if this is a new customer
 	 */
 	protected boolean isNewCustomer()

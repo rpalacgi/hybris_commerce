@@ -1,16 +1,13 @@
 #
 # Import CMS content for the site
 #
-
-$contentCatalog=__CONTENT_CATALOG_NAME__
+$contentCatalog=hybrisContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
-
 # Language
 $lang=en
-
 # Content Pages
 UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
- ;;mobile-account;"My Account"
+ ;;mobile-account;"Your Account"
  ;;mobile-add-edit-address;"Add/Edit Address"
  ;;mobile-address-book;"Address Book"
  ;;mobile-cartPage;"Your Shopping Cart"
@@ -30,4 +27,6 @@ UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
  ;;mobile-searchEmpty;"No Results"
  ;;mobile-storefinderPage;"StoreFinder"
  ;;mobile-termsAndConditions;"Terms and Conditions"
+ ;;mobile-update-email;"Update Email"
+ ;;mobile-update-profile;"Update Profile"
  ;;mobile-updatePassword;"Update Forgotten Password"

@@ -1,13 +1,14 @@
 #
 # Import the CMS Site configuration for the store
 #
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$contentCatalog=__CONTENT_CATALOG_NAME__
+$storePrefix=hybris
+$productCatalog=$storePrefixProductCatalog
+$contentCatalog=$storePrefixContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
 $defaultLanguage=en
-$storeUid=__STORE_UID__
-$siteUid=__STORE_UID__
-$promoGrp=__DEFAULT_PROMO_GRP__
+$storeUid=$storePrefix
+$siteUid=$storePrefix
+$promoGrp=hybrisPromoGrp
 $siteMapUrlLimitPerFile=50000
 
 $siteMapLangCur=enEur
@@ -16,7 +17,7 @@ $customSiteMapUrls=
 
 # Import config properties into impex macros
 UPDATE GenericItem[processor=de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor];pk[unique=true]
-# Module gen config
+# Import modulegen config properties into impex macros
 $jarResource=$config-jarResource
 # Load the storefront context root config param
 $storefrontContextRoot=$config-storefrontContextRoot
@@ -40,7 +41,6 @@ INSERT_UPDATE SiteMapPage;&siteMapPage;code(code)[unique=true];frequency(code)[u
 ;Content;Content;monthly;0.4;;
 ;Custom;Custom;daily;1.0;;
 
- 
 INSERT_UPDATE SiteMapConfig;&siteMapConfigId;configId[unique=true];siteMapLanguageCurrencies(&siteMapLanguageCurrency);siteMapPages(&siteMapPage);siteMapTemplate(&siteMapRenderer)[unique=true];customUrls;
 ;$storeUidSiteMapConfig;$storeUidSiteMapConfig;$siteMapLangCur;$siteMapPage;$siteUid-siteMapTemplate;$customSiteMapUrls;
 

@@ -1,13 +1,15 @@
-# ImpEx for Importing Categories
-
+# ImpEx for Importing Categories into Merchandise Store
+   
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
-
+$productCatalog=hybrisProductCatalog
+   
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
-
-# Language
+   
 $lang=en
-
-# Create Categories
-UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
+   
+UPDATE Category;$catalogVersion;code[unique=true];name[lang=$lang];description[lang=$lang]
+;;1;Hybris Catalogue;
+;;100;Stuff;
+;;200;Clothes;
+;;210;Shirts;
+;;220;Sweats;

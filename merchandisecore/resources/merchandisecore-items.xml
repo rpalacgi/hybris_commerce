@@ -114,5 +114,28 @@
 			</itemtype>
 		</typegroup>
 
+		<typegroup name="merchandise">
+			<itemtype code="Product" autocreate="false" generate="false">
+				<description>Extending the Product type from core with additional attributes.</description>
+				<attributes>
+					<attribute qualifier="internalOnly" type="java.lang.Boolean">
+						<description>Defines if the product should be sold to hybris employees only.</description>
+						<persistence type="property" />
+					</attribute>
+				</attributes>
+			</itemtype>
+
+			<itemtype code="Customer" generate="false" autocreate="false">
+				<attributes>
+					<attribute qualifier="isInternal" type="java.lang.Boolean">
+						<description>Defines if the customer is a hybris internal employee. Aggregated information</description>
+						<persistence type="dynamic" attributeHandler="dynamicHybrisCustomerAttributeBean" />
+						<modifiers read="true" write="true" optional="true"
+								   unique="false" />
+					</attribute>
+				</attributes>
+			</itemtype>
+		</typegroup>
+
 	</itemtypes>
 </items>

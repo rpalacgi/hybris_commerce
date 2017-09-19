@@ -24,7 +24,7 @@
         
     <context:annotation-config/>
 
-	<!--<bean id="yAcceleratorCockpitsSystemSetup" class="de.hybris.merchandise.cockpits.setup.CockpitSystemSetup"  parent="abstractCoreSystemSetup"/>-->
+	<bean id="yAcceleratorCockpitsSystemSetup" class="de.hybris.merchandise.cockpits.setup.CockpitSystemSetup"  parent="abstractCoreSystemSetup"/>
 
 	<alias alias="merchandisecockpitsLabelLocator" name="defaultYacceleratorcockpitsLabelLocator" />
 	<bean id="defaultYacceleratorcockpitsLabelLocator" class="de.hybris.platform.cockpit.util.ConfigurableCockpitLabelLocator" scope="singleton" lazy-init="false">

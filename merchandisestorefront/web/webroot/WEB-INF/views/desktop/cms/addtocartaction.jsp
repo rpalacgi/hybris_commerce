@@ -20,8 +20,18 @@
 		<c:if test="${product.purchasable and product.stock.stockLevelStatus.code ne 'outOfStock' }">
 			<c:set var="buttonType">submit</c:set>
 		</c:if>
+		
+				
+		<!-- make product unavailable if user external and product internal only -->
+        <spring:theme var="addToCartProblemText" code="product.variants.out.of.stock"/>
+        <c:if test="${product.internalOnly and !user.internal}">
+        	<c:out value="Internal only customer">Internal only customer</c:out>
+            <c:set var="buttonType">button</c:set>
+            <spring:theme var="addToCartProblemText" code="text.addToCart.unavailable"/>
+        </c:if>
 
 		<c:choose>
+        
 			<c:when test="${fn:contains(buttonType, 'button')}">
 				<button type="${buttonType}" class="addToCartButton outOfStock" disabled="disabled">
 					<spring:theme code="product.variants.out.of.stock"/>

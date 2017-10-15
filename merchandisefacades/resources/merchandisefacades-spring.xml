@@ -79,6 +79,10 @@
 		<property name="typeService" ref="typeService"/>
 	</bean>
 
+    <bean id="productInternalOnlyPopulator" class="de.hybris.merchandise.facades.populators.ProductInternalOnlyPopulator"/>
+    <bean id="searchResultProductInternalOnlyPopulator" class="de.hybris.merchandise.facades.populators.SearchResultProductInternalOnlyPopulator"/>
+  	<bean id="customerInternalPopulator" class="de.hybris.merchandise.facades.populators.CustomerInternalPopulator"/>
+
 	<bean id="apparelProductPopulator" class="de.hybris.merchandise.facades.populators.ApparelProductPopulator" >
 		<property name="genderConverter" ref="genderConverter"/>
 	</bean>

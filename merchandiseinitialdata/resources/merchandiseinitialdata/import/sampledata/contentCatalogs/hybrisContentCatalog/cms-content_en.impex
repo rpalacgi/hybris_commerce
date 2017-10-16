@@ -127,3 +127,9 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
 ;;EmptyCartParagraphComponent;"<h2>Your shopping cart is empty</h2><p>Suggestions</p><ul><li>Browse our products by selecting a category above</li></ul>"
 ;;HelpParagraphComponent;"<div class=""helpBanner""><span class=""bannerHeadline"" >NEED HELP?</span><span class=""bannerText"">Click here for help with checking out<a href=""#"" >GO > ></a></span></div>"
+
+## Adding localized content to the new CMS components
+UPDATE RandomImageParagraphComponent;$contentCV[unique=true];uid[unique=true];text[lang=$lang]
+;;RandomImage1;Fashion
+;;RandomImage2;People
+;;RandomImage3;Life Style

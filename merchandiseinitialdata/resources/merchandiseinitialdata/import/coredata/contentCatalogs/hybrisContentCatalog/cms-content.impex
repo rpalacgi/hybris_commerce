@@ -77,6 +77,9 @@ INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=
 ;Footer;;;footer
 ;TopHeaderSlot;;;wide
 ;BottomHeaderSlot;;;wide
+;Section2A;;RandomImageParagraphComponent;narrow
+;Section2B;;RandomImageParagraphComponent;narrow
+;Section2C;;RandomImageParagraphComponent;wide
 # Product Details Page Template
 # The CrossSelling and UpSelling slots are designed for related products, cross-sells and up-sells.
 INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='ProductDetailsPageTemplate'];validComponentTypes(code);compTypeGroup(code)
@@ -394,6 +397,12 @@ INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=
 ;MiddleContentSlot;;;wide
 ;BottomHeaderSlot;;;wide
 
+## NEW CMS COMPONENT - RANDOM PICTURE ----------------------------------------------------
+INSERT_UPDATE RandomImageParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;topic(code);width;height
+;;RandomImage1;Random Image;RandomImage1;fashion;228;228
+;;RandomImage2;Random Image;RandomImage2;people;228;228
+;;RandomImage3;Random Image;RandomImage3;nightlife;228;228
+
 # Create Content Slots
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active
 ;;SiteLogoSlot;Default Site Logo Slot;true
@@ -427,6 +436,9 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active
 ;;CenterLeftContentSlot;Center Left Content Slot;true
 ;;CenterRightContentSlot;Center Right Content Slot;true
 ;;EmptyCartMiddleContent;Empty Cart Middle Content;true
+;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;RandomImage1
+;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;RandomImage2
+;;Section2CSlot-Homepage;Section2C Slot for Homepage;true;RandomImage3
 # Bind Content Slots to Page Templates
 INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='ProductDetailsPageTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
 ;;SiteLogo-ProductDetails;SiteLogo;;SiteLogoSlot;true

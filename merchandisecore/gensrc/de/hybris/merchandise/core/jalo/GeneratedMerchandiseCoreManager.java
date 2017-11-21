@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 16 Oct, 2017 10:05:13 AM                    ---
+ * --- Generated at 17 Oct, 2017 10:37:00 PM                    ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -21,6 +21,7 @@ import de.hybris.merchandise.core.constants.MerchandiseCoreConstants;
 import de.hybris.merchandise.core.jalo.ApparelProduct;
 import de.hybris.merchandise.core.jalo.ApparelSizeVariantProduct;
 import de.hybris.merchandise.core.jalo.ApparelStyleVariantProduct;
+import de.hybris.merchandise.core.jalo.BTGCustomerInternalFlagOperand;
 import de.hybris.merchandise.core.jalo.ElectronicsColorVariantProduct;
 import de.hybris.platform.jalo.GenericItem;
 import de.hybris.platform.jalo.Item;
@@ -140,6 +141,32 @@ public abstract class GeneratedMerchandiseCoreManager extends Extension
 	public ApparelStyleVariantProduct createApparelStyleVariantProduct(final Map attributeValues)
 	{
 		return createApparelStyleVariantProduct( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public BTGCustomerInternalFlagOperand createBTGCustomerInternalFlagOperand(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( MerchandiseCoreConstants.TC.BTGCUSTOMERINTERNALFLAGOPERAND );
+			return (BTGCustomerInternalFlagOperand)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating BTGCustomerInternalFlagOperand : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public BTGCustomerInternalFlagOperand createBTGCustomerInternalFlagOperand(final Map attributeValues)
+	{
+		return createBTGCustomerInternalFlagOperand( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public ElectronicsColorVariantProduct createElectronicsColorVariantProduct(final SessionContext ctx, final Map attributeValues)

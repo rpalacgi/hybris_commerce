@@ -23,10 +23,11 @@ $checkoutFlowGroup=defaultCheckoutGroup
  
 INSERT_UPDATE PromotionGroup;Identifier[unique=true];
 ;$promoGrp;
- 
+
+$pickupInStoreMode=BUY_AND_COLLECT
 # Base Store
-INSERT_UPDATE BaseStore;uid[unique=true];catalogs(id);currencies(isocode);net;taxGroup(code);storelocatorDistanceUnit(code);defaultCurrency(isocode);languages(isocode);defaultLanguage(isocode);deliveryCountries(isocode);submitOrderProcessCode;pickupInStoreMode(code);customerAllowedToIgnoreSuggestions;paymentProvider;checkoutFlowGroup;
-;$storeUid;$productCatalog;$currencies;$net;jp-taxes;km;$defaultCurrency;$languages;$defaultLanguage;$deliveryCountries;$orderProcessCode;$pickupInStoreMode;$customerAllowedToIgnoreSuggestions;$paymentProvider;$checkoutFlowGroup;
+INSERT_UPDATE BaseStore;uid[unique=true];catalogs(id);currencies(isocode);net;taxGroup(code);storelocatorDistanceUnit(code);defaultCurrency(isocode);languages(isocode);defaultLanguage(isocode);deliveryCountries(isocode);submitOrderProcessCode;pickupInStoreMode(code)
+;$storeUid;$productCatalog;$currencies;$net;jp-taxes;km;$defaultCurrency;$languages;$defaultLanguage;$deliveryCountries;$orderProcessCode;$pickupInStoreMode
  
 INSERT_UPDATE BaseStore2DeliveryModeRel;source(uid)[unique=true];target(code)[unique=true]
 ;hybris;premium-net

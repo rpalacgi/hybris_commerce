@@ -29,6 +29,9 @@
 	<!-- SystemSetup for the MerchandiseCore -->
 	<bean id="acceleratorCoreSystemSetup" class="de.hybris.merchandise.core.setup.CoreSystemSetup"
 	       parent="abstractCoreSystemSetup"/>
+	       
+	       <!-- BTG -->
+     <bean id="customerInternalFlagValueProvider" class="de.hybris.merchandise.core.btg.condition.operand.valueprovider.CustomerInternalFlagValueProvider" />
 
 	<!-- Solr field value providers -->
 	
@@ -41,6 +44,11 @@
         <property name="priceComparator" ref="volumePriceComparator"/>
         <property name="catalogVersionService" ref="catalogVersionService"/>
     </bean>
+    
+    <bean id="hybrisPointOfServiceFacetDisplayNameProvider"
+	    class="de.hybris.merchandise.core.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider">
+	    <property name="pointOfServiceService" ref="pointOfServiceService" />
+	</bean>
 
     <bean id="volumePriceComparator" class="de.hybris.merchandise.core.comparators.VolumeAwarePriceInformationComparator" scope="singleton"/>
 

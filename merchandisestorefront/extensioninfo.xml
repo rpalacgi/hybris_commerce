@@ -21,6 +21,7 @@
 
 
 
+<requires-extension name="merchandisecheckoutaddon"/>
 <requires-extension name="randomimageaddon"/>
 <requires-extension name="liveeditaddon"/>
         <requires-extension name="btg"/>

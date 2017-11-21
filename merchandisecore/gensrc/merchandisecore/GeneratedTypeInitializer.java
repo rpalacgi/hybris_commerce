@@ -86,6 +86,16 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			false
 		);
 	
+		createItemType(
+			"BTGCustomerInternalFlagOperand",
+			"BTGAbstractCustomerOperand",
+			de.hybris.merchandise.core.jalo.BTGCustomerInternalFlagOperand.class,
+			null,
+			false,
+			null,
+			false
+		);
+	
 		createEnumerationType(
 			"SwatchColorEnum",
 			null
@@ -366,6 +376,19 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 			single_setAttributeProperties_Customer_isInternal();
 		
+				{
+				Map customPropsMap = new HashMap();
+				
+				setItemTypeProperties(
+					"BTGCustomerInternalFlagOperand",
+					false,
+					true,
+					true,
+					null,
+					customPropsMap
+				);
+				}
+			
 				setDefaultProperties(
 					"GenderList",
 					true,

@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 16 Oct, 2017 10:05:13 AM                    ---
+ * --- Generated at 17 Oct, 2017 10:37:00 PM                    ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -30,6 +30,7 @@ public class GeneratedMerchandiseCoreConstants
 		public static final String APPARELPRODUCT = "ApparelProduct".intern();
 		public static final String APPARELSIZEVARIANTPRODUCT = "ApparelSizeVariantProduct".intern();
 		public static final String APPARELSTYLEVARIANTPRODUCT = "ApparelStyleVariantProduct".intern();
+		public static final String BTGCUSTOMERINTERNALFLAGOPERAND = "BTGCustomerInternalFlagOperand".intern();
 		public static final String ELECTRONICSCOLORVARIANTPRODUCT = "ElectronicsColorVariantProduct".intern();
 		public static final String SWATCHCOLORENUM = "SwatchColorEnum".intern();
 	}
